@@ -1,0 +1,42 @@
+/* 基础样式 */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #ffffff; min-height: 100vh; color: #333; margin: 0; padding: 0; }
+.container { width: 100%; max-width: 800px; min-width: 320px; margin: 0 auto; min-height: 100vh; background: #ffffff; border-right: 1px solid #e8eaed; }
+.header { background: #ffffff; border-bottom: 1px solid #e8eaed; padding: 16px 20px; position: sticky; top: 0; z-index: 100; }
+.header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.header-left { flex: 1; }
+.header-title { font-size: 20px; font-weight: 500; color: #202124; margin: 0; }
+.header-subtitle { color: #5f6368; font-size: 13px; margin-top: 2px; }
+.header-actions { display: flex; gap: 8px; }
+.btn { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border: 1px solid #dadce0; border-radius: 2px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.2s ease; text-decoration: none; white-space: nowrap; background: white; color: #3c4043; min-height: 32px; box-sizing: border-box; }
+.btn:hover { box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15); border-color: #dadce0; }
+.btn-primary { background: #1a73e8; color: white; border-color: #1a73e8; }
+.btn-primary:hover { background: #1557b0; border-color: #1557b0; }
+.btn-secondary { background: white; color: #3c4043; border-color: #dadce0; }
+.btn-secondary:hover { background: #f8f9fa; }
+.icon { font-size: 14px; }
+.main-content { min-height: 400px; padding: 20px; }
+.loading { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 60px 20px; color: #5f6368; }
+.spinner { width: 32px; height: 32px; border: 3px solid #f3f3f3; border-top: 3px solid #1a73e8; border-radius: 50%; animation: spin 1s linear infinite; margin-bottom: 16px; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.empty-state { text-align: center; padding: 60px 20px; color: #5f6368; }
+.empty-icon { font-size: 48px; margin-bottom: 16px; opacity: 0.6; }
+.empty-state h2 { font-size: 20px; margin-bottom: 8px; color: #202124; font-weight: 400; }
+.empty-state p { font-size: 14px; margin-bottom: 24px; line-height: 1.4; }
+.collections-list { display: flex; flex-direction: column; gap: 0; }
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center; z-index: 1000; backdrop-filter: blur(4px); }
+.modal-content { background: white; border-radius: 12px; padding: 24px; width: 90%; max-width: 500px; max-height: 80vh; overflow-y: auto; box-shadow: 0 20px 60px rgba(0,0,0,0.3); animation: modalSlideIn 0.3s ease; }
+.modal-large .modal-content { max-width: 800px; }
+@keyframes modalSlideIn { from { opacity: 0; transform: translateY(-20px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #e9ecef; }
+.modal-header h3 { margin: 0; color: #495057; }
+.modal-body { margin-bottom: 20px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; color: #202124; font-size: 14px; font-weight: 500; }
+.form-input { width: 100%; padding: 12px; border: 1px solid #dadce0; border-radius: 4px; font-size: 14px; color: #202124; background: white; box-sizing: border-box; transition: border-color 0.2s ease; }
+.form-input:focus { outline: none; border-color: #1a73e8; box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.1); }
+.modal-actions { display: flex; gap: 12px; justify-content: flex-end; }
+.rename-input { width: 100%; padding: 12px 16px; border: 2px solid #e9ecef; border-radius: 8px; font-size: 14px; margin-bottom: 20px; transition: border-color 0.2s ease; }
+.rename-input:focus { outline: none; border-color: #007bff; box-shadow: 0 0 0 3px rgba(0,123,255,0.1); }
+#detailExport.btn-secondary { background: #f0f4ff; border-color: #c3dafe; color: #3182ce; }
+#detailExport.btn-secondary:hover { background: #e6f3ff; }

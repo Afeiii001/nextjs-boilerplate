@@ -1,65 +1,227 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
+    <div>
+      <header>
+        <div className="container nav-container">
+          <div className="logo">🛒 SaveSmart</div>
+          <nav className="nav-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
             <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#"
+              className="btn btn-primary"
+              style={{ padding: "8px 16px", fontSize: "0.9rem" }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
+              Install Now
+            </a>
+          </nav>
+        </div>
+      </header>
+
+      <section className="hero">
+        <div className="container hero-content">
+          <div className="hero-text">
+            <h1>
+              SaveSmart: Smart, Automatic Cashback. <br />
+              Never Miss a Deal.
+            </h1>
+            <p className="sub-headline">
+              Instantly Get Verified Coupons & Auto-Pilot Cashback on 1,000+
+              Stores. One-Click Activation. Shop like normal.
+            </p>
             <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              href="#"
+              className="btn btn-primary"
+              style={{ fontSize: "1.1rem", padding: "16px 32px" }}
             >
-              Learning
-            </a>{" "}
-            center.
+              Get SaveSmart & Start Saving Free
+            </a>
+            <p className="trust-text">
+              ✅ Trusted by 5,000+ Smart Shoppers. Available for Chrome.
+            </p>
+          </div>
+          <div className="hero-image">
+            <div
+              style={{
+                width: "90%",
+                height: "80%",
+                background: "#f9f9f9",
+                borderRadius: 8,
+                position: "relative",
+              }}
+            >
+              <div
+                style={{
+                  height: 30,
+                  background: "#ddd",
+                  borderRadius: "8px 8px 0 0",
+                  display: "flex",
+                  alignItems: "center",
+                  padding: "0 10px",
+                  gap: 5,
+                }}
+              >
+                <div
+                  style={{
+                    width: 10,
+                    height: 10,
+                    background: "#ff5f56",
+                    borderRadius: "50%",
+                  }}
+                ></div>
+                <div
+                  style={{
+                    width: 10,
+                    height: 10,
+                    background: "#ffbd2e",
+                    borderRadius: "50%",
+                  }}
+                ></div>
+                <div
+                  style={{
+                    width: 10,
+                    height: 10,
+                    background: "#27c93f",
+                    borderRadius: "50%",
+                  }}
+                ></div>
+              </div>
+              <div className="mockup-popup">
+                <div
+                  style={{
+                    color: "var(--primary-navy)",
+                    fontWeight: "bold",
+                    marginBottom: 10,
+                  }}
+                >
+                  🎉 Cashback Found!
+                </div>
+                <div
+                  style={{
+                    fontSize: "2rem",
+                    color: "var(--accent-orange)",
+                    fontWeight: 800,
+                    marginBottom: 10,
+                  }}
+                >
+                  15% OFF
+                </div>
+                <div
+                  style={{
+                    background: "var(--primary-navy)",
+                    color: "white",
+                    padding: "5px 20px",
+                    borderRadius: 4,
+                    fontSize: "0.8rem",
+                  }}
+                >
+                  Activate Now
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="features">
+        <div className="container">
+          <h2 className="section-title">Why Use SaveSmart?</h2>
+          <div className="feature-grid">
+            <div className="feature-card">
+              <div className="icon-box">🔔</div>
+              <h3>Cashback Activation</h3>
+              <p style={{ color: "var(--text-light)" }}>
+                Detects when a store supports cashback and lets you activate it
+                with one simple click.
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="icon-box">🏷️</div>
+              <h3>Verified Deals</h3>
+              <p style={{ color: "var(--text-light)" }}>
+                Automatically applies verified coupons and discounts. No more
+                dead codes.
+              </p>
+            </div>
+            <div className="feature-card">
+              <div className="icon-box">⚡</div>
+              <h3>Easy to Use</h3>
+              <p style={{ color: "var(--text-light)" }}>
+                Simple popup interface shows cashback status instantly. Set it
+                and forget it.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="steps">
+        <div className="container">
+          <h2 className="section-title">How It Works</h2>
+          <div className="steps-container">
+            <div className="step-item">
+              <div className="step-circle">1</div>
+              <h3>Install</h3>
+              <p style={{ color: "var(--text-light)", marginTop: 10 }}>
+                Add SaveSmart to Chrome in seconds. It's free.
+              </p>
+            </div>
+            <div className="step-item">
+              <div className="step-circle">2</div>
+              <h3>Shop</h3>
+              <p style={{ color: "var(--text-light)", marginTop: 10 }}>
+                Browse your favorite stores like you normally do.
+              </p>
+            </div>
+            <div className="step-item">
+              <div className="step-circle">3</div>
+              <h3>Save</h3>
+              <p style={{ color: "var(--text-light)", marginTop: 10 }}>
+                Click "Activate" when the popup appears and earn cash.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="faq">
+        <div className="container">
+          <h2 className="section-title">Frequently Asked Questions</h2>
+          <details>
+            <summary>Which stores are supported?</summary>
+            <p>
+              SaveSmart works with hundreds of top online stores in fashion,
+              beauty, electronics, and more.
+            </p>
+          </details>
+          <details>
+            <summary>How do I get my cashback?</summary>
+            <p>
+              After purchase, your cashback will be available in your SaveSmart
+              account. You can request payout via PayPal.
+            </p>
+          </details>
+          <details>
+            <summary>Is my data safe?</summary>
+            <p>
+              Absolutely. We only collect necessary information to track
+              cashback. We do not sell your personal data.
+            </p>
+          </details>
+        </div>
+      </section>
+
+      <footer>
+        <div className="container">
+          <p style={{ marginBottom: 10 }}>
+            &copy; 2025 SaveSmart Extension. All rights reserved.
           </p>
+          <div>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> |{" "}
+            <a href="mailto:support@example.com">Contact Support</a>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </footer>
     </div>
   );
 }
